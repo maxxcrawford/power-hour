@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>Power Hour TV</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+		<link rel="stylesheet" href="assets/css/styles.css">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+		<script src="https://kit.fontawesome.com/1c89033795.js" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<header>
+			<img class="logo" src="assets/img/phtv-logo.svg" alt="Power Hour TV">
+		</header>
+		<div id="player"></div>
+		<div class="player-ui">
+			<div class="player-round-counter fredoka">
+				<span>##</span> /
+				<span>60</span>
+			</div>
+			<div class="player-time-elapsed fredoka">
+				-0:<span></span>
+			</div>
+			<div class="player-controls">
+				<span id="playPause"><i class="fa fa-play-circle"></i></span>
+				<!-- <span><i class="fa fa-play-pause"></i></span> -->
+				<span><i class="fa fa-redo-alt"></i></span>
+			</div>
+			<div class="player-progress">
+				<div class="progress-bar"></div>
+			</div>
+		</div>
+	</body>
+	<script async type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+	<script type="text/javascript" src="assets/js/app.js"></script>
+</html>
