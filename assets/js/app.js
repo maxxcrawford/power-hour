@@ -8,10 +8,11 @@ var roundTotalCount = 60;
 // TODO: Randomize playlist order at beginning
 const videoPlaylist = [
   {videoId: "dpCe36t6oC4", start: 81},
-  {videoId: "ncR2_pnzngM", start: 99},
+  // {videoId: "ncR2_pnzngM", start: 99},
   {videoId: "IKiSPUc2Jck", start: 36},
   {videoId: "ulwUkaKjgY0", start: 0},
   {videoId: "mGrFtyd_LMI", start: 0},
+  {videoId: "K5le9sYdYkM", start: 6},
 ]
 
 function shuffle(array) {
@@ -70,7 +71,7 @@ const player = {
     iterationCount++;
     console.log(videoPlaylist[iterationCount]);
     videoFrame.loadVideoById(videoPlaylist[iterationCount].videoId, videoPlaylist[iterationCount].start, "large")
-    roundCount.innerHTML = iterationCount;
+    roundCount.innerHTML = iterationCount + 1;
     // refresh data
   },
   pause: function() {
