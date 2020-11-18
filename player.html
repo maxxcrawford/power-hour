@@ -12,22 +12,25 @@
 		<header>
 			<img class="logo" src="assets/img/phtv-logo.svg" alt="Power Hour TV">
 		</header>
-		<div id="player"></div>
+		<!-- <div class="first-play">
+			<span id="playPause"><i class="fa fa-play-circle"></i></span>
+		</div> -->
+		<div id="videoFrame"></div>
 		<div class="player-ui">
 			<div class="player-round-counter fredoka">
-				<span>##</span> /
-				<span>60</span>
+				<span id="roundCount"></span> /
+				<span id="roundTotal"></span>
 			</div>
 			<div class="player-time-elapsed fredoka">
-				-0:<span></span>
+				-0:<span id="countdownSeconds"></span>
 			</div>
 			<div class="player-controls">
 				<span id="playPause"><i class="fa fa-play-circle"></i></span>
 				<!-- <span><i class="fa fa-play-pause"></i></span> -->
-				<span><i class="fa fa-redo-alt"></i></span>
+				<!-- <span><i class="fa fa-redo-alt"></i></span> -->
 			</div>
 			<div class="player-progress">
-				<div class="progress-bar"></div>
+				<div id="progressBar" class="progress-bar"></div>
 			</div>
 		</div>
 	</body>

@@ -6,6 +6,7 @@ html {
 }
 
 :root {
+  --maroon: #B92E00;
  --white: #ffffff;
 }
 
@@ -32,7 +33,7 @@ body {
 
 /* Player */
 
-#player {
+#videoFrame {
   height:calc(100vh - 4px);
   width:calc(100vw - 4px);
   position: absolute;
@@ -55,7 +56,7 @@ body {
 .player-round-counter {
   position: absolute;
   left: 1rem;
-  bottom: 1rem;
+  bottom: 4rem;
   font-size: 2rem;
   color: var(--white);
 }
@@ -63,7 +64,7 @@ body {
 .player-time-elapsed {
   position: absolute;
   right: 1rem;
-  bottom: 1rem;
+  bottom: 4rem;
   font-size: 2rem;
   color: var(--white);
 }
@@ -72,15 +73,42 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 1rem;
+  bottom: 4rem;
 }
 
 .player-controls span {
   display: inline-block;
   margin-right: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s ease-out;
+}
+
+.player-controls span:hover {
+  transform: scale(1.05);
 }
 
 .player-controls span i {
   color: var(--white);
-  font-size: 2rem;
+  font-size: 3rem;
+}
+
+.player-progress {
+  position: absolute;
+  bottom: 0;
+  height: 2rem;
+  width: 100%;
+  z-index: 1;
+}
+
+.player-progress .progress-bar {
+  background: var(--maroon);
+  height: 100%;
+  position: absolute;
+  right: 0;
+  width: 100%;
+  transition: width 1s linear;
+}
+
+.player-progress .progress-bar.no-animation {
+  transition: none;
 }
