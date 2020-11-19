@@ -92,8 +92,9 @@ header {
   position: fixed;
   bottom: 0;
   width: 100%;
-  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 50%);
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
   z-index: 10;
+  text-shadow: 0 0 5px rgba(0,0,0,.7);
 }
 
 .player-ui-data {
