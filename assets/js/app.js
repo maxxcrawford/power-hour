@@ -4,6 +4,12 @@ let videoFrame;
 
 var iterationCount = 0;
 var roundTotalCount = 60;
+var roundTime = 60;
+
+// Debug Mode
+if (window.location.hash == "#debug") {
+  roundTime = 12;
+}
 
 // TODO: Randomize playlist order at beginning
 const videoPlaylist = [
@@ -36,11 +42,14 @@ function shuffle(array) {
 
 shuffle(videoPlaylist);
 
-const playPause = document.getElementById("playPause");
+const startButton = document.getElementById("startButton");
+const playButton = document.getElementById("playButton");
 const progressBar = document.getElementById("progressBar");
 const roundCount = document.getElementById("roundCount");
 const roundTotal = document.getElementById("roundTotal");
 const countdownSeconds = document.getElementById("countdownSeconds");
+const staticFx = document.getElementById("staticFx");
+const muteButton = document.getElementById("muteButton");
 
 const playerParams = {
   height: '390',
@@ -57,86 +66,103 @@ const playerParams = {
   }
 };
 
-
-
 function onYouTubeIframeAPIReady() {
   videoFrame = new YT.Player("videoFrame", playerParams);
 }
 
 const player = {
   init: function() {
-    console.log("init");
+    // console.log("init");
   },
   next: function() {
     iterationCount++;
+    player.ui.resetProgressBar();
     console.log(videoPlaylist[iterationCount]);
     videoFrame.loadVideoById(videoPlaylist[iterationCount].videoId, videoPlaylist[iterationCount].start, "large")
     roundCount.innerHTML = iterationCount + 1;
+
     // refresh data
   },
   pause: function() {
     // pause video
     // update button
   },
-  setup: function(elem) {
-    console.log("setup", elem, this.start);
+  setup: function() {
     roundTotal.innerHTML = roundTotalCount;
     roundCount.innerHTML = iterationCount + 1;
-    elem.addEventListener("click", this.start, false);
+    countdownSeconds.innerHTML = roundTime;
+    videoFrame.setVolume(100);
+    playButton.addEventListener("click", this.start, false);
+    startButton.addEventListener("click", this.start, false);
+    muteButton.addEventListener("click", this.mute, false);
   },
   start: function() {
     videoFrame.playVideo();
     countdownTimer();
     player.ui.togglePlayPause();
+    document.body.classList.add("is-loaded");
+  },
+  mute: function() {
+    const muteButtonClassList = muteButton.children[0].classList;
+    muteButtonClassList.toggle("fa-volume");
+    muteButtonClassList.toggle("fa-volume-mute");
+
+    if (videoFrame.isMuted()  ) {
+      videoFrame.unMute();
+    } else {
+      videoFrame.mute();
+    }
+
   },
   ui: {
     togglePlayPause: function() {
-      const playPauseClassList = playPause.children[0].classList;
-      playPauseClassList.toggle("fa-play-circle");
-      playPauseClassList.toggle("fa-pause-circle");
+      const playButtonClassList = playButton.children[0].classList;
+      playButtonClassList.toggle("fa-play");
+      playButtonClassList.toggle("fa-pause");
     },
     updateProgressBar: function(time) {
-      const progress = (time/60)*100;
+      const progress = (time/roundTime)*100;
       progressBar.style.width = Math.floor(progress) + "%";
     },
     resetProgressBar: function() {
       progressBar.classList.add("no-animation");
       progressBar.style.width = "100%";
-      progressBar.classList.remove("no-animation");
+      //
     }
   }
 };
 
 function onPlayerReady(event) {
-	console.log("onPlayerReady");
-  player.setup(playPause);
+  player.setup();
   player.init();
   // event.target.playVideo();
 }
 
 function countdownTimer() {
 
-  console.log("countdownTimer");
+  var countdownTime = roundTime;
 
-  var countDownDate = 60;
 
   var x = setInterval(function() {
 
-      var timer = countDownDate--;
+      var timer = countdownTime--;
 
 			// Display the result in the element with id="demo"
-
+      progressBar.classList.remove("no-animation");
       player.ui.updateProgressBar(timer);
 
 			// If the count down is finished, write some text
 			if (timer < 1) {
+        staticFx.classList.remove("hidden");
 				clearInterval(x);
-
         player.next();
         // Remove this
 				countdownTimer();
 			} else if (timer < 10) {
         countdownSeconds.innerHTML = "0" + timer;
+			} else if (roundTime - 2) {
+        staticFx.classList.add("hidden");
+        countdownSeconds.innerHTML = timer;
 			} else {
         countdownSeconds.innerHTML = timer;
       }

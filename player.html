@@ -15,23 +15,34 @@
 		<!-- <div class="first-play">
 			<span id="playPause"><i class="fa fa-play-circle"></i></span>
 		</div> -->
+		<video id="staticFx" src="assets/media/static.mp4" autoplay muted loop class="static"></video>
+		<span id="startButton"><i class="fa fa-play-circle"></i></span>
 		<div id="videoFrame"></div>
 		<div class="player-ui">
-			<div class="player-round-counter fredoka">
-				<span id="roundCount"></span> /
-				<span id="roundTotal"></span>
-			</div>
-			<div class="player-time-elapsed fredoka">
-				-0:<span id="countdownSeconds"></span>
-			</div>
-			<div class="player-controls">
-				<span id="playPause"><i class="fa fa-play-circle"></i></span>
-				<!-- <span><i class="fa fa-play-pause"></i></span> -->
-				<!-- <span><i class="fa fa-redo-alt"></i></span> -->
-			</div>
 			<div class="player-progress">
 				<div id="progressBar" class="progress-bar"></div>
 			</div>
+
+			<div class="player-ui-data">
+				<!-- Play / Pause -->
+				<div class="player-controls">
+					<span id="playButton"><i class="fa fa-play"></i></span>
+					<!-- <span><i class="fa fa-play-pause"></i></span> -->
+					<span><i class="fa fa-step-forward"></i></span>
+					<span id="muteButton"><i class="fa fa-volume"></i></span>
+				</div>
+				<!-- -0:00 -->
+				<div class="player-time-elapsed fredoka">
+					-0:<span id="countdownSeconds"></span>
+				</div>
+				<!-- X / 60 -->
+				<div class="player-round-counter fredoka">
+					<span id="roundCount"></span> /
+					<span id="roundTotal"></span>
+				</div>
+			</div>
+
+
 		</div>
 	</body>
 	<script async type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
