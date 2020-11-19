@@ -107,10 +107,14 @@ const player = {
     muteButtonClassList.toggle("fa-volume");
     muteButtonClassList.toggle("fa-volume-mute");
 
+    document.body.classList.toggle("is-muted");
+
     if (videoFrame.isMuted()  ) {
       videoFrame.unMute();
+      staticFx.muted = false;
     } else {
       videoFrame.mute();
+      staticFx.muted = true;
     }
 
   },
