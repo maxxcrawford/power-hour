@@ -157,6 +157,7 @@ function countdownTimer() {
 
 			// If the count down is finished, write some text
 			if (timer < 1) {
+        staticFx.play();
         staticFx.classList.remove("hidden");
 				clearInterval(x);
         player.next();
@@ -166,6 +167,7 @@ function countdownTimer() {
         countdownSeconds.innerHTML = "0" + timer;
 			} else if (roundTime - 2) {
         staticFx.classList.add("hidden");
+        staticFx.pause();
         countdownSeconds.innerHTML = timer;
 			} else {
         countdownSeconds.innerHTML = timer;
