@@ -11,6 +11,17 @@ if (window.location.hash == "#debug") {
   roundTime = 12;
 }
 
+var hash = window.location.hash;
+hash = hash.substring(1);
+hash = parseInt(hash, 10);
+
+console.log(hash);
+
+if (typeof hash == "number") {
+  hash = hash - 1;
+  iterationCount = hash;
+}
+
 // TODO: Randomize playlist order at beginning
 let videoPlaylist = [
   {title: "Brett Lkes Beer (Trap Remix)", videoId: "DaX77nmv7Ec", start:9 },
@@ -69,7 +80,8 @@ let videoPlaylist = [
   {title: "Waynes World - Sponsors", videoId: "KjB6r-HDDI0", start:9 },
   {title: "Super Troopers - Meow", videoId: "1rlSjdnAKY4", start:32 },
   {title: "Starship Troopers - I'm Doing My Part", videoId: "EKHme9MvMx0", start:0 },
-  {title: "Snatch - Pikey Caravan", videoId: "tGDO-9hfaiI", start:29 }
+  {title: "Snatch - Pikey Caravan", videoId: "tGDO-9hfaiI", start:29 },
+  {title: "Fast And The Furious - Corona Time", videoID: "O4hkEXBKGeA", start:78}
 ];
 
 let endingVideos = [
@@ -100,7 +112,7 @@ shuffle(videoPlaylist);
 
 videoPlaylist.push(endingVideos[0], endingVideos[1]);
 
-console.dir(videoPlaylist);
+// console.dir(videoPlaylist);
 
 
 const startButton = document.getElementById("startButton");
