@@ -15,11 +15,13 @@ var hash = window.location.hash;
 hash = hash.substring(1);
 hash = parseInt(hash, 10);
 
-console.log(hash);
-
-if (typeof hash == "number") {
+if (typeof hash == "number" && !isNaN(hash)) {
+  // console.log("number");
+  // console.log(hash);
   hash = hash - 1;
+  // console.log(hash);
   iterationCount = hash;
+  // console.log(iterationCount);
 }
 
 // TODO: Randomize playlist order at beginning
