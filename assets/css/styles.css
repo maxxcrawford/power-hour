@@ -169,3 +169,12 @@ header {
   outline: none;
   border: none;
 }
+
+.player-controls span.offline {
+  cursor: not-allowed;
+  transition: all .2s ease-out;
+}
+
+.player-controls span.offline:hover {
+  opacity: 0.5;
+}
