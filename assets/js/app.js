@@ -482,6 +482,8 @@
 			countdownSeconds.innerHTML = roundTime;
 			videoFrame.setVolume(100);
 			player.updateState(iterationCount);
+			staticFx.play();
+			staticFx.classList.remove("hidden");
 			videoFrame.cueVideoById(
 				player.state.currentVideoId,
 				player.state.currentVideoStartTime,
@@ -548,7 +550,7 @@
 	function onPlayerStateChange(event) {
 		var videoData = videoFrame.getVideoData();
 		// Remove static FX is YouTube is playing
-		if (event.data === 1 || event.data === 3) {
+		if (event.data === 1) {
 			staticFx.classList.add("hidden");
 			staticFx.pause();
 		}
@@ -579,8 +581,8 @@
 
 			// If the count down is finished, write some text
 			if (timer < 1) {
-				// staticFx.play();
-				// staticFx.classList.remove("hidden");
+				staticFx.play();
+				staticFx.classList.remove("hidden");
 				clearInterval(playerTimerInterval);
 				player.next();
 				// Remove this
