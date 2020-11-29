@@ -38,10 +38,34 @@
 					-0:<span id="countdownSeconds"></span>
 				</div>
 				<!-- X / 60 -->
-				<div class="player-round-counter fredoka">
-					<span id="roundCount"></span> /
-					<span id="roundTotal"></span>
+				<div class="align-right">
+					<div class="player-controls">
+						<span id="settingsOpenButton"><i class="fa fa-cog"></i></span>
+					</div>
+					<div class="player-round-counter fredoka">
+						<span id="roundCount"></span> /
+						<span id="roundTotal"></span>
+					</div>
 				</div>
+			</div>
+
+			<div class="settings-panel fredoka">
+				<h2>Settings</h2>
+				<ul>
+					<li>
+						<a href="#" class="settings-button" data-setting="centuryClub">
+							<i class="fa fa-toggle-off"></i> Century Club (100 Rounds)
+						</a>
+					</li>
+					<li>
+						<a href="#" class="settings-button" data-setting="pissBreakVideo">
+							<i class="fa fa-toggle-off"></i> Disable Urine Break Video
+						</a>
+					</li>
+				</ul>
+				<button class="close-button" id="settingsCloseButton" type="button" name="button">
+					<i class="fa fa-close"></i>
+				</button>
 			</div>
 
 

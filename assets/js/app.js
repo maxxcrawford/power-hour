@@ -382,6 +382,10 @@
 	const countdownSeconds = document.getElementById("countdownSeconds");
 	const staticFx = document.getElementById("staticFx");
 	const muteButton = document.getElementById("muteButton");
+	const settingsOpenButton = document.getElementById("settingsOpenButton");
+	const settingsCloseButton = document.getElementById("settingsCloseButton");
+	const settingsPanel = document.querySelector(".settings-panel");
+	const settingsOptionButtons = document.querySelectorAll(".settings-button");
 
 	let playerParams = {
 		height: '390',
@@ -488,11 +492,18 @@
 				player.state.currentVideoId,
 				player.state.currentVideoStartTime,
 			);
-			console.log(iterationCount, videoPlaylist[iterationCount]);
 			playButton.addEventListener("click", this.playPause, false);
 			newVideo.addEventListener("click", this.newVideo, false);
 			startButton.addEventListener("click", this.start, false);
 			muteButton.addEventListener("click", this.mute, false);
+			settingsOpenButton.addEventListener("click", player.ui.openSettingsPanel, false);
+			settingsCloseButton.addEventListener("click", player.ui.closeSettingsPanel, false);
+			settingsOptionButtons.forEach(button => {
+				button.addEventListener("click", player.ui.toggleSettingsButton, false);
+			});
+		},
+		saveSetting: function(setting) {
+			console.log(setting);
 		},
 		start: function() {
 			videoFrame.playVideo();
@@ -514,24 +525,34 @@
 				videoFrame.mute();
 				staticFx.muted = true;
 			}
-
 		},
 		newVideo: function() {
 			console.log("newVideo");
 		},
 		ui: {
+			resetProgressBar: function() {
+				progressBar.classList.add("no-animation");
+				progressBar.style.width = "100%";
+			},
 			togglePlayPause: function() {
 				const playButtonClassList = playButton.children[0].classList;
 				playButtonClassList.toggle("fa-play");
 				playButtonClassList.toggle("fa-pause");
 			},
+			toggleSettingsButton: function() {
+				event.target.children[0].classList.toggle("fa-toggle-off");
+				event.target.children[0].classList.toggle("fa-toggle-on");
+				player.saveSetting(event.target.dataset.setting);
+			},
+			openSettingsPanel: function() {
+				settingsPanel.classList.toggle("open");
+			},
+			closeSettingsPanel: function() {
+				settingsPanel.classList.remove("open");
+			},
 			updateProgressBar: function(time) {
 				const progress = (time / roundTime) * 100;
 				progressBar.style.width = Math.floor(progress) + "%";
-			},
-			resetProgressBar: function() {
-				progressBar.classList.add("no-animation");
-				progressBar.style.width = "100%";
 			}
 		},
 		updateState: function(count) {
@@ -549,7 +570,8 @@
 
 	function onPlayerStateChange(event) {
 		var videoData = videoFrame.getVideoData();
-		// Remove static FX is YouTube is playing
+		// Remove static FX is YouTube
+		// console.log( videoFrame.getCurrentTime() );
 		if (event.data === 1) {
 			staticFx.classList.add("hidden");
 			staticFx.pause();
