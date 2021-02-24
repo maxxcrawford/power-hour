@@ -4,16 +4,27 @@
 		<meta charset="utf-8">
 		<title>Power Hour TV</title>
 		<link rel="preconnect" href="https://fonts.gstatic.com">
-		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
 		<link rel="stylesheet" href="assets/css/styles.css">
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://kit.fontawesome.com/1c89033795.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
-		<a class="intro-link" href="player.html"></a>
-		<video poster="assets/img/phtv-logo.svg" width="1280" height="768" id="intro" src="assets/media/intro.mp4" preload autoplay class="full"></video>
+	<body class="start">
+		<header>
+			<img class="logo" src="assets/img/phtv-logo.svg" alt="Power Hour TV">
+		</header>
+		<div class="start-menu">			
+			<ul class="">
+				<li><a href="#">Start</a></li>
+				<li><a href="#">Settings</a></li>
+				<li><a href="#">Credits</a></li>
+			</ul>
 		</div>
+		<div id="videoFrame"></div>
+		<!-- <a class="intro-link" href="player.html"></a>
+		<video poster="assets/img/phtv-logo.svg" width="1280" height="768" id="intro" src="assets/media/intro.mp4" preload autoplay class="full"></video>
+		</div> -->
 	</body>
 	<script async type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
 	<script type="text/javascript" src="assets/js/app.js"></script>

@@ -30,6 +30,7 @@
 	let videoPlaylist;
 	let endingVideos;
 	let pauseVideos;
+	let introVideos;
 	let playerTimerInterval;
 
 	function shuffle(array) {
@@ -361,6 +362,14 @@
 				title: "Austin Powers Evacuation Complete",
 				videoId: "VUdukEEf3ek",
 				start: 0
+			}
+		];
+
+		introVideos = [
+			{
+				title: "",
+				videoId: "Gssk5kEKiUg",
+				start: 12
 			}
 		];
 
