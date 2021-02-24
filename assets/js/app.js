@@ -1,5 +1,7 @@
 	"use strict";
 
+	const YOUTUBE_API_KEY = "foo"
+
 	let videoFrame;
 
 	var iterationCount = 0;
@@ -9,7 +11,7 @@
 	function hashCheck(hash) {
 		// Debug Mode
 		if (hash == "#debug") {
-			roundTime = 12;
+			roundTime = 6;
 		}
 
 		// Remove "#" from hash
@@ -418,12 +420,12 @@
 		init: function() {
 			console.log("init");
 		},
-		next: function() {
+		next: async function() {
 			iterationCount++;
 			staticFx.play();
 			staticFx.classList.remove("hidden");
 			player.ui.resetProgressBar();
-			player.updateState(iterationCount);
+			await player.updateState(iterationCount);
 			console.log(videoPlaylist[iterationCount]);
 			videoFrame.loadVideoById(
 				player.state.currentVideoId,
@@ -480,12 +482,12 @@
 				repeatStartTime,
 			)
 		},
-		setup: function() {
+		setup: async function() {
 			roundTotal.innerHTML = roundTotalCount;
 			roundCount.innerHTML = iterationCount + 1;
 			countdownSeconds.innerHTML = roundTime;
 			videoFrame.setVolume(100);
-			player.updateState(iterationCount);
+			await player.updateState(iterationCount);
 			staticFx.play();
 			staticFx.classList.remove("hidden");
 			videoFrame.cueVideoById(
@@ -555,15 +557,31 @@
 				progressBar.style.width = Math.floor(progress) + "%";
 			}
 		},
-		updateState: function(count) {
+		updateState: async function(count) {
 			// Sets player state video/start time based on which round the user is in.
+			const youtubeFetchURL = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoPlaylist[count].videoId}&key=${YOUTUBE_API_KEY}`;
+
+			// const videoStatus = await fetch(youtubeFetchURL)
+      // .then((response) => response.json())
+      // .then(data => {
+      //   return data;
+      // });
+			//
+			// const canBeEmbedded = videoStatus.items[0].contentDetails.contentRating.ytRating;
+			//
+			// // TODO: Catch videos that cannot be embedded and skip them (without updating video count);
+			// if (canBeEmbedded === "ytAgeRestricted") {
+			// 	console.error(`The video, "${videoPlaylist[count].title}" is age-restricted (https://youtu.be/${videoPlaylist[count].videoId})`);
+			// 	// throw new Error("This video is age-restricted");
+			// }
+
 			player.state.currentVideoId = videoPlaylist[count].videoId;
 			player.state.currentVideoStartTime = videoPlaylist[count].start;
 		},
 	};
 
-	function onPlayerReady(event) {
-		player.setup();
+	async function onPlayerReady(event) {
+		await player.setup();
 		player.init();
 		// event.target.playVideo();
 	}

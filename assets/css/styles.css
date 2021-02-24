@@ -127,22 +127,32 @@ header {
   margin-right: 1em;
 }
 
-.player-controls span {
+.player-controls span,
+.player-controls button {
   display: inline-block;
   margin-right: 1rem;
   cursor: pointer;
   transition: transform 0.2s ease-out;
 }
 
+.player-controls button {
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+}
+
 .player-controls span:last-child {
   margin-right: 0;
 }
 
-.player-controls span:hover {
+.player-controls span:hover,
+.player-controls button:hover {
   transform: scale(1.05);
 }
 
-.player-controls span i {
+.player-controls span i,
+.player-controls button i {
   color: var(--white);
   font-size: 2rem;
 }
