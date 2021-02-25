@@ -1,289 +1,323 @@
 {
-	"version": "0.1",
-	"playlist": [{
-			"title": "Brett Lkes Beer (Trap Remix)",
-			"videoId": "DaX77nmv7Ec",
-			"start": 9
-		},
-		{
-			"title": "Shaun of the Dead - She's So Drunk",
-			"videoId": "JF4EyXhZudo",
-			"start": 42
-		},
-		{
-			"title": "Shaun of the Dead - The Plan",
-			"videoId": "dpCe36t6oC4",
-			"start": 81
-		},
-		{
-			"title": "Arnold Schwarzenegger - Total Recall Commentary",
-			"videoId": "ncR2_pnzngM",
-			"start": 99
-		},
-		{
-			"title": "Anchorman - Sex Panthor",
-			"videoId": "IKiSPUc2Jck",
-			"start": 36
-		},
-		{
-			"title": "The Thing - Chest Defibrillation",
-			"videoId": "JjIXwkX1e48",
-			"start": 0
-		},
-		{
-			"title": "Step Brothers - Bunk Beds",
-			"videoId": "ulwUkaKjgY0",
-			"start": 0
-		},
-		{
-			"title": "Varsity Blues - Beer Can Challenge",
-			"videoId": "RjdPAElUs9E",
-			"start": 61
-		},
-		{
-			"title": "Breakfast Club - Smoking",
-			"videoId": "uL_C29H-bYo",
-			"start": 91
-		},
-		{
-			"title": "The Departed - Corner Store Beating",
-			"videoId": "U2TdJknauD8",
-			"start": 18
-		},
-		{
-			"title": "Mac & Me - Wheelchair Scene",
-			"videoId": "K5le9sYdYkM",
-			"start": 6
-		},
-		{
-			"title": "King of the Hill - That's my purse!",
-			"videoId": "mwyBW9-we5A",
-			"start": 36
-		},
-		{
-			"title": "Crispin Glover on Letterman",
-			"videoId": "7dYjdKbMT_c",
-			"start": 91
-		},
-		{
-			"title": "There Will Be Blood - I Drink Your Milkshake",
-			"videoId": "s_hFTR6qyEo",
-			"start": 66
-		},
-		{
-			"title": "Kicking and Screaming - Food in the Beer",
-			"videoId": "h4OULP90F0c",
-			"start": 17
-		},
-		{
-			"title": "Back to the Future - Parking",
-			"videoId": "mGrFtyd_LMI",
-			"start": 49
-		},
-		{
-			"title": "Jumanji - What Year is it??",
-			"videoId": "20H_uJsmcN0",
-			"start": 7
-		},
-		{
-			"title": "Westworld - Bar shootout",
-			"videoId": "Iit33EYEpb0",
-			"start": 180
-		},
-		{
-			"title": "Harold and Kumar DVD Menu",
-			"videoId": "C6-SnNMCnJs",
-			"start": 85
-		},
-		{
+	"version": "0.1.0",
+	"playlist": {
+		"videoPlaylist": [
+			{
+				"title": "Beefest - Das Boot",
+				"videoId": "wEqVkJiYJ80",
+				"start": 61
+			},
+			{
+				"title": "Top Gun - Volleyball",
+				"videoId": "via8G0cqQME",
+				"start": 2
+			},
+			{
+				"title": "Too Many Cooks",
+				"videoId": "QrGrOK8oZG8",
+				"start": 0
+			},
+			{
+				"title": "Good Will Hunting - My Boy's Wicked Smart",
+				"videoId": "hIdsjNGCGz4",
+				"start": 108
+			},
+			{
+				"title": "Batman - Joker in Museum",
+				"videoId": "ZGFbd-zF_Cg",
+				"start": 80
+			},
+			{
+				"title": "Super Troopers - Meow",
+				"videoId": "1rlSjdnAKY4",
+				"start": 32
+			},
+			{
+				"title": "Shaun of the Dead - The Plan",
+				"videoId": "dpCe36t6oC4",
+				"start": 81
+			},
+			{
+				"title": "The Shining - Bar Scene",
+				"videoId": "tmY4k85_XEE",
+				"start": 0
+			},
+			{
+				"title": "Crispin Glover on Letterman",
+				"videoId": "7dYjdKbMT_c",
+				"start": 91
+			},
+			{
+				"title": "The Big Lebowski - Over the Line",
+				"videoId": "YedqV4Gl_us",
+				"start": 61
+			},
+			{
+				"title": "Waynes World - Sponsors",
+				"videoId": "KjB6r-HDDI0",
+				"start": 9
+			},
+			{
+				"title": "Shaun of the Dead - She's So Drunk",
+				"videoId": "JF4EyXhZudo",
+				"start": 42
+			},
+			{
+				"title": "Office Space - TPS Reports",
+				"videoId": "jsLUidiYm0w",
+				"start": 0
+			},
+			{
+				"title": "Always Sunny - Wade Boggs",
+				"videoId": "7HCYEoLKFgw",
+				"start": 0
+			},
+			{
+				"title": "Harold and Kumar DVD Menu",
+				"videoId": "C6-SnNMCnJs",
+				"start": 85
+			},
+			{
+				"title": "Back to the Future - Parking",
+				"videoId": "mGrFtyd_LMI",
+				"start": 49
+			},
+			{
+				"title": "Hot Rod - Cool Beans",
+				"videoId": "TOUrLn1FFCA",
+				"start": 27
+			},
+			{
+				"title": "Westworld - Bar shootout",
+				"videoId": "Iit33EYEpb0",
+				"start": 180
+			},
+			{
+				"title": "Inglourious Basterds - That's a bingo!",
+				"videoId": "O5s3Oj2cPgc",
+				"start": 34
+			},
+			{
+				"title": "Reno 911 - New Boot Goofin",
+				"videoId": "_CU0vYZpslk",
+				"start": 16
+			},
+			{
+				"title": "The Thing - Chest Defibrillation",
+				"videoId": "JjIXwkX1e48",
+				"start": 0
+			},
+			{
+				"title": "Silicon Valley - Jerk Algorithm",
+				"videoId": "P-hUV9yhqgY",
+				"start": 23
+			},
+			{
+				"title": "There Will Be Blood - I Drink Your Milkshake",
+				"videoId": "s_hFTR6qyEo",
+				"start": 66
+			},
+			{
+				"title": "Step Brothers - Bunk Beds",
+				"videoId": "ulwUkaKjgY0",
+				"start": 0
+			},
+			{
+				"title": "Big Trouble in Little China - Six Demon Bag",
+				"videoId": "RR7q-qf3VSQ",
+				"start": 2
+			},
+			{
+				"title": "Stand by Me - Pie Eating Competition",
+				"videoId": "zK0JaEde4VI",
+				"start": 48
+			},
+			{
+				"title": "Hot Rod - Falling Down the Mountain",
+				"videoId": "A8GnphPdchY",
+				"start": 78
+			},
+			{
+				"title": "Superbad - Fake ID",
+				"videoId": "BBYyflqgV8A",
+				"start": 58
+			},
+			{
+				"title": "Fast And The Furious - Corona Time",
+				"videoID": "O4hkEXBKGeA",
+				"start": 78
+			},
+			{
+				"title": "Road House - Bar Fight",
+				"videoId": "4WsstoMZu0o",
+				"start": 76
+			},
+			{
+				"title": "Starship Troopers - I'm Doing My Part",
+				"videoId": "EKHme9MvMx0",
+				"start": 0
+			},
+			{
+				"title": "Mac & Me - Wheelchair Scene",
+				"videoId": "K5le9sYdYkM",
+				"start": 6
+			},
+			{
+				"title": "Pulp Fiction - Big Kahuna Burger",
+				"videoId": "Mnb_3ibUp38",
+				"start": 128
+			},
+			{
+				"title": "Beerfest - ZJ",
+				"videoId": "2gVhZT1tHzg",
+				"start": 46
+			},
+			{
+				"title": "Anchorman - Sex Panthor",
+				"videoId": "IKiSPUc2Jck",
+				"start": 36
+			},
+			{
+				"title": "Varsity Blues - Beer Can Challenge",
+				"videoId": "RjdPAElUs9E",
+				"start": 61
+			},
+			{
+				"title": "Snatch - Pikey Caravan",
+				"videoId": "tGDO-9hfaiI",
+				"start": 29
+			},
+			{
+				"title": "Brett Lkes Beer (Trap Remix)",
+				"videoId": "DaX77nmv7Ec",
+				"start": 9
+			},
+			{
+				"title": "Office Space - Fax Machine",
+				"videoId": "N9wsjroVlu8",
+				"start": 1
+			},
+			{
+				"title": "Anchorman - Fight Scene",
+				"videoId": "ipsPgNEmAXI",
+				"start": 245
+			},
+			{
+				"title": "Jumanji - What Year is it??",
+				"videoId": "20H_uJsmcN0",
+				"start": 7
+			},
+			{
+				"title": "The Living Daylights - Ghetto Blaster",
+				"videoId": "BHyPS1boeuI",
+				"start": 8
+			},
+			{
+				"title": "Point Break - Fuck You Up",
+				"videoId": "aMukX7yVSTM",
+				"start": 43
+			},
+			{
+				"title": "Happy Gilmore - The Price Is Wrong, Bitch",
+				"videoId": "8QJiAK-s5a0",
+				"start": 90
+			},
+			{
+				"title": "Old School - Frank the Tank",
+				"videoId": "rCY6xAsmaes",
+				"start": 38
+			},
+			{
+				"title": "The Departed - Corner Store Beating",
+				"videoId": "U2TdJknauD8",
+				"start": 18
+			},
+			{
+				"title": "Kicking and Screaming - Food in the Beer",
+				"videoId": "h4OULP90F0c",
+				"start": 17
+			},
+			{
+				"title": "Django Unchained - Beer Foam",
+				"videoId": "tSjie7nTzJA",
+				"start": 43
+			},
+			{
+				"title": "Cat Woman - One-on-One",
+				"videoId": "o02MxS2ugEU",
+				"start": 22
+			},
+			{
+				"title": "Arnold Schwarzenegger - Total Recall Commentary",
+				"videoId": "ncR2_pnzngM",
+				"start": 99
+			},
+			{
+				"title": "Blockers - Butt Chugging",
+				"videoId": "TfsGgp4go6k",
+				"start": 63
+			},
+			{
+				"title": "Monty Python and the Holy Grail - Knight Running",
+				"videoId": "XslcgQJMZaY",
+				"start": 0
+			},
+			{
+				"title": "Accepted - Ask Me About My Wiener",
+				"videoId": "eP52omnnZmg",
+				"start": 12
+			},
+			{
+				"title": "Breakfast Club - Smoking",
+				"videoId": "uL_C29H-bYo",
+				"start": 91
+			},
+			{
+				"title": "King of the Hill - That's my purse!",
+				"videoId": "mwyBW9-we5A",
+				"start": 36
+			},
+			{
+				"title": "Always Sunny - Pepe Silvia",
+				"videoId": "ghrdSTC66MA",
+				"start": 0
+			},
+			{
+				"title": "Tombstone - Doc Holiday",
+				"videoId": "MICPyrnGYwg",
+				"start": 68
+			}
+		],
+		"endingVideos": [
+			{
+				"title": "Rocky - Steps Sequence",
+				"videoId": "_YYmfM2TfUA",
+				"start": 103
+			},
+			{
+				"title": "Thelma & Louise",
+				"videoId": "66CP-pq7Cx0",
+				"start": 172
+			}
+		],
+		"pauseVideos": [
+			{
 			"title": "Austin Powers Evacuation Complete",
 			"videoId": "VUdukEEf3ek",
 			"start": 0
-		},
-		{
-			"title": "Inglourious Basterds - That's a bingo!",
-			"videoId": "O5s3Oj2cPgc",
-			"start": 34
-		},
-		{
-			"title": "Pulp Fiction - Big Kahuna Burger",
-			"videoId": "Mnb_3ibUp38",
-			"start": 128
-		},
-		{
-			"title": "Blockers - Butt Chugging",
-			"videoId": "TfsGgp4go6k",
-			"start": 63
-		},
-		{
-			"title": "Stand by Me - Pie Eating Competition",
-			"videoId": "zK0JaEde4VI",
-			"start": 48
-		},
-		{
-			"title": "The Living Daylights - Ghetto Blaster",
-			"videoId": "BHyPS1boeuI",
-			"start": 8
-		},
-		{
-			"title": "Reno 911 - New Boot Goofin",
-			"videoId": "_CU0vYZpslk",
-			"start": 16
-		},
-		{
-			"title": "Anchorman - Fight Scene",
-			"videoId": "ipsPgNEmAXI",
-			"start": 245
-		},
-		{
-			"title": "Batman - Joker in Museum",
-			"videoId": "ZGFbd-zF_Cg",
-			"start": 80
-		},
-		{
-			"title": "Top Gun - Volleyball",
-			"videoId": "via8G0cqQME",
-			"start": 2
-		},
-		{
-			"title": "Accepted - Ask Me About My Wiener",
-			"videoId": "eP52omnnZmg",
-			"start": 12
-		},
-		{
-			"title": "Good Will Hunting - My Boy's Wicked Smart",
-			"videoId": "hIdsjNGCGz4",
-			"start": 108
-		},
-		{
-			"title": "Tombstone - Doc Holiday",
-			"videoId": "MICPyrnGYwg",
-			"start": 68
-		},
-		{
-			"title": "Hot Rod - Falling Down the Mountain",
-			"videoId": "A8GnphPdchY",
-			"start": 78
-		},
-		{
-			"title": "Hot Rod - Cool Beans",
-			"videoId": "TOUrLn1FFCA",
-			"start": 27
-		},
-		{
-			"title": "The Shining - Bar Scene",
-			"videoId": "tmY4k85_XEE",
-			"start": 0
-		},
-		{
-			"title": "Django Unchained - Beer Foam",
-			"videoId": "tSjie7nTzJA",
-			"start": 43
-		},
-		{
-			"title": "Beerfest - ZJ",
-			"videoId": "2gVhZT1tHzg",
-			"start": 46
-		},
-		{
-			"title": "Beefest - Das Boot",
-			"videoId": "wEqVkJiYJ80",
-			"start": 61
-		},
-		{
-			"title": "Silicon Valley - Jerk Algorithm",
-			"videoId": "P-hUV9yhqgY",
-			"start": 23
-		},
-		{
-			"title": "Old School - Frank the Tank",
-			"videoId": "rCY6xAsmaes",
-			"start": 38
-		},
-		{
-			"title": "Big Trouble in Little China - Six Demon Bag",
-			"videoId": "RR7q-qf3VSQ",
-			"start": 2
-		},
-		{
-			"title": "Road House - Bar Fight",
-			"videoId": "4WsstoMZu0o",
-			"start": 76
-		},
-		{
-			"title": "Cat Woman - One-on-One",
-			"videoId": "o02MxS2ugEU",
-			"start": 22
-		},
-		{
-			"title": "Point Break - Fuck You Up",
-			"videoId": "aMukX7yVSTM",
-			"start": 43
-		},
-		{
-			"title": "Always Sunny - Pepe Silvia",
-			"videoId": "ghrdSTC66MA",
-			"start": 0
-		},
-		{
-			"title": "Too Many Cooks",
-			"videoId": "QrGrOK8oZG8",
-			"start": 0
-		},
-		{
-			"title": "Always Sunny - Wade Boggs",
-			"videoId": "7HCYEoLKFgw",
-			"start": 0
-		},
-		{
-			"title": "Office Space - TPS Reports",
-			"videoId": "jsLUidiYm0w",
-			"start": 0
-		},
-		{
-			"title": "Office Space - Fax Machine",
-			"videoId": "N9wsjroVlu8",
-			"start": 1
-		},
-		{
-			"title": "Superbad - Fake ID",
-			"videoId": "BBYyflqgV8A",
-			"start": 58
-		},
-		{
-			"title": "Happy Gilmore - The Price Is Wrong, Bitch",
-			"videoId": "8QJiAK-s5a0",
-			"start": 90
-		},
-		{
-			"title": "The Big Lebowski - Over the Line",
-			"videoId": "YedqV4Gl_us",
-			"start": 61
-		},
-		{
-			"title": "Monty Python and the Holy Grail - Knight Running",
-			"videoId": "XslcgQJMZaY",
-			"start": 0
-		},
-		{
-			"title": "Waynes World - Sponsors",
-			"videoId": "KjB6r-HDDI0",
-			"start": 9
-		},
-		{
-			"title": "Super Troopers - Meow",
-			"videoId": "1rlSjdnAKY4",
-			"start": 32
-		},
-		{
-			"title": "Starship Troopers - I'm Doing My Part",
-			"videoId": "EKHme9MvMx0",
-			"start": 0
-		},
-		{
-			"title": "Snatch - Pikey Caravan",
-			"videoId": "tGDO-9hfaiI",
-			"start": 29
-		}
-	]
+			}
+		],
+		"introVideos": [
+			{
+				"title": "Movie Drinking Compilation",
+				"videoId": "Gssk5kEKiUg",
+				"start": 12
+			},
+			{
+				"title": "James Bond Drinking Compilation",
+				"videoId": "i8oBFj0CSUc",
+				"start": 26
+			}
+		]
+	}
 }
