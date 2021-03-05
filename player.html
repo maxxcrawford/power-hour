@@ -30,7 +30,7 @@
 				<div class="player-controls">
 					<span id="playButton"><i class="fa fa-pause"></i></span>
 					<!-- <span><i class="fa fa-play-pause"></i></span> -->
-					<span class="offline" id="newVideo"><i class="fa fa-step-forward"></i></span>
+					<span data-tooltip="Skip this video" class="tooltip" id="newVideo"><i class="fa fa-step-forward"></i></span>
 					<span id="muteButton"><i class="fa fa-volume"></i></span>
 				</div>
 				<!-- -0:00 -->
@@ -42,7 +42,7 @@
 					<div class="player-controls">
 						<!-- TODO: https://github.com/maxxcrawford/power-hour/issues/17 -->
 						<!-- <button is="google-cast-button"><i class="fab fa-chromecast"></i></button> -->
-						<span id="settingsOpenButton"><i class="fa fa-cog"></i></span>
+						<span data-tooltip="Open Settings" class="tooltip" id="settingsOpenButton"><i class="fa fa-cog"></i></span>
 					</div>
 					<div class="player-round-counter fredoka">
 						<span id="roundCount"></span> /
@@ -54,6 +54,7 @@
 			<div class="settings-panel fredoka">
 				<h2>Settings</h2>
 				<ul>
+					<!-- TODO: Add "Go to Round" Input -->
 					<li>
 						<a href="#" class="settings-button" data-setting="centuryClub">
 							<i class="fa fa-toggle-off"></i> Century Club (100 Rounds)

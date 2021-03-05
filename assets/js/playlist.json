@@ -1,7 +1,27 @@
 {
-	"version": "0.1.0",
+	"version": "0.1.2",
 	"playlist": {
 		"videoPlaylist": [
+			{
+				"title": "Mean Girls - Jingle Bell Rock",
+				"videoId": "h81UOjlFmMs",
+				"start": 15
+			},
+			{
+				"title": "American Psycho - Business Card Scene",
+				"videoId": "cISYzA36-ZY",
+				"start": 89
+			},
+			{
+				"title": "Austin Powers - Johnson",
+				"videoId": "ebuLsO2B2VQ",
+				"start": 8
+			},
+			{
+				"title": "Monty Python and the Holy Grail - Dennis",
+				"videoId": "tNOioHk7zWs",
+				"start": 119
+			},
 			{
 				"title": "Beefest - Das Boot",
 				"videoId": "wEqVkJiYJ80",

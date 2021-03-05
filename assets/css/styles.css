@@ -179,6 +179,28 @@ header {
   visibility: visible;
 }
 
+.tooltip {
+  position: relative;
+}
+
+.tooltip::after {
+  content: attr(data-tooltip);
+  display: none;
+  font-family: sans-serif;
+  position: absolute;
+  top: -25%;
+  left: 50%;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 3px 6px;
+  font-size: 0.7rem;
+  white-space: nowrap;
+}
+
+.tooltip:hover::after {
+  display: block;
+}
+
 /* Settings */
 
 .settings-panel {

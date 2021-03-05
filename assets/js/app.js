@@ -1,6 +1,6 @@
 	"use strict";
 
-	const PLAYLIST_VERSION = "0.1.0";
+	const PLAYLIST_VERSION = "0.1.3";
 	const YOUTUBE_API_KEY = "foo";
 
 	let videoFrame;
@@ -8,11 +8,12 @@
 	var iterationCount = 0;
 	var roundTotalCount = 60;
 	var roundTime = 60;
+	var arrayTrimLength = roundTotalCount - 2;
 
 	function hashCheck(hash) {
 		// Debug Mode
 		if (hash == "#debug") {
-			roundTime = 6;
+			roundTime = 10;
 		}
 
 		// Remove "#" from hash
@@ -28,11 +29,20 @@
 
 	hashCheck(window.location.hash);
 
+	let srcPlaylist;
 	let videoPlaylist;
 	let endingVideos;
 	let pauseVideos;
 	let introVideos;
+	let skipVideos; // a video "bone pile" in case the user skips
+	let noMoreSkips = {
+		"title": "They Live - The Long Fight",
+		"videoId": "dN8Z7y_QcwE",
+		"start": 123
+	};
 	let playerTimerInterval;
+
+	let replacementVideo;
 
 	function shuffle(array) {
 		var currentIndex = array.length,
@@ -54,7 +64,8 @@
 		return array;
 	}
 
-	async function buildPlayList(){
+	async function buildPlayLists(){
+		console.log("buildPlayLists");
 
 		// Only fetch JSON if not in localStorage or out of date
 		const localStorageVersion = localStorage.getItem("version");
@@ -73,22 +84,24 @@
 		const playlist = JSON.parse(localStorage.getItem("playlist"));
 
 		// Define the playlists
-		videoPlaylist = playlist.videoPlaylist;
+		srcPlaylist = playlist.videoPlaylist;
 		introVideos = playlist.introVideos;
 		pauseVideos = playlist.pauseVideos;
 		endingVideos = playlist.endingVideos;
 
 		// TODO: Add shuffle option, rename videoPlaylist to "tempVideoPlaylist"
-		shuffle(videoPlaylist);
+		shuffle(srcPlaylist);
 
-		// Trim array to 58 videos and create new array.
-		videoPlaylist = videoPlaylist.slice(0, 58);
+		// Trim main playlist to 58 videos and create new array for overflow/skip videos.
+		videoPlaylist = srcPlaylist.slice(0, arrayTrimLength);
+		skipVideos = srcPlaylist.slice(arrayTrimLength + 1);
 
 		// Add ending videos to random array
 		videoPlaylist.push(endingVideos[0], endingVideos[1]);
+
 	}
 
-	buildPlayList();
+	buildPlayLists();
 
 	const startButton = document.getElementById("startButton");
 	const playButton = document.getElementById("playButton");
@@ -244,7 +257,28 @@
 			}
 		},
 		newVideo: function() {
-			console.log("newVideo");
+			staticFx.play();
+			staticFx.classList.remove("hidden");
+
+			if (skipVideos.length < 1) {
+				replacementVideo = noMoreSkips;
+			} else {
+				replacementVideo = skipVideos[0];
+				skipVideos.shift()
+			}
+
+			const adjustedStartTime = (roundTime - player.state.elapsedTimeLeftInRound) + replacementVideo.start;
+
+			clearInterval(playerTimerInterval);
+
+			videoFrame.playVideo();
+
+			playerTimer(player.state.elapsedTimeLeftInRound);
+
+			videoFrame.loadVideoById(
+				replacementVideo.videoId,
+				adjustedStartTime,
+			)
 		},
 		ui: {
 			resetProgressBar: function() {
@@ -316,8 +350,7 @@
 	}
 
 	function playerTimer(timeRemaining) {
-
-		var roundCountdownTime = roundTime;
+		let roundCountdownTime = roundTime;
 
 		// If coming back from a pause, set the interval countdown accordingly.
 		if (timeRemaining) {
