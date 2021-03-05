@@ -327,6 +327,7 @@ header {
 @media only screen and (max-width: 600px) {
   .settings-panel .close-button,
   .settings-panel h2,
+  .settings-panel ul a,
   .player-controls span i,
   .player-controls button i,
   .player-time-elapsed,
@@ -339,5 +340,8 @@ header {
   .logo {
     left: 50%;
     transform: translateX(-50%);
+  }
+  .settings-panel {
+    width: 80%
   }
 }

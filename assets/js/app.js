@@ -1,6 +1,6 @@
 	"use strict";
 
-	const PLAYLIST_VERSION = "0.1.3";
+	const PLAYLIST_VERSION = "0.1.4";
 	const YOUTUBE_API_KEY = "foo";
 
 	let videoFrame;
@@ -90,7 +90,9 @@
 		endingVideos = playlist.endingVideos;
 
 		// TODO: Add shuffle option, rename videoPlaylist to "tempVideoPlaylist"
-		shuffle(srcPlaylist);
+		// shuffle(srcPlaylist);
+
+		// console.log(srcPlaylist);
 
 		// Trim main playlist to 58 videos and create new array for overflow/skip videos.
 		videoPlaylist = srcPlaylist.slice(0, arrayTrimLength);
