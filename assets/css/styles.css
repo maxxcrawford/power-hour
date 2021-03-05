@@ -15,6 +15,7 @@ body {
   margin: 0;
   min-height: 100vh;
   background: var(--black);
+  font-family: sans-serif;
 }
 
 /* Utilities */
@@ -291,17 +292,52 @@ header {
 } */
 
 .start header {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
 }
 
 .start-menu {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50% -50%);
+  transform: translate(-50%, -50%);
   color: white;
 }
 
+.start-menu ul {
+  margin: 0;
+  padding: 0;
+}
+
+.start-menu ul li {
+  display: block;
+  padding: 0 0 1rem;
+  text-align: center;
+}
+
 .start #videoFrame {
-  background: red;
+  /* background: red; */
+}
+
+.start-menu a {
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .settings-panel .close-button,
+  .settings-panel h2,
+  .player-controls span i,
+  .player-controls button i,
+  .player-time-elapsed,
+  .player-round-counter {
+    font-size: 1.25rem;
+  }
+  .player-ui-data {
+    padding: 0 1rem;
+  }
+  .logo {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
