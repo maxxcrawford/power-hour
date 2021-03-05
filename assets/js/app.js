@@ -72,7 +72,7 @@
 
 		if (localStorageVersion !== PLAYLIST_VERSION) {
 			// Fetch JSON
-			const json = await fetch("/assets/js/playlist.json")
+			const json = await fetch("https://maxxcrawford.github.io/power-hour/assets/js/playlist.json")
 		  .then(response => response.json())
 		  .then(data => {return data});
 
