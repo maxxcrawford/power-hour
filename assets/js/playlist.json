@@ -1,5 +1,5 @@
 {
-	"version": "0.1.2",
+	"version": "0.1.4",
 	"playlist": {
 		"videoPlaylist": [
 			{
@@ -48,6 +48,11 @@
 		    "start": 245
 		  },
 		  {
+		    "title": "Escape From L.A. - Surfboard Car Chase",
+		    "videoId": "a3HOCIXroqQ",
+		    "start": 15
+		  },
+		  {
 		    "title": "Snatch - Pikey Caravan",
 		    "videoId": "tGDO-9hfaiI",
 		    "start": 29
@@ -78,6 +83,11 @@
 		    "start": 91
 		  },
 		  {
+		    "title": "Raising Arizona - Diapers!",
+		    "videoId": "IsiMJDCWvFQ",
+		    "start": 0
+		  },
+			{
 		    "title": "King of the Hill - That's my purse!",
 		    "videoId": "mwyBW9-we5A",
 		    "start": 36
@@ -133,6 +143,16 @@
 		    "start": 36
 		  },
 		  {
+		    "title": "Fear and Loathing in Las Vegas - Somewhere Around Barstow",
+		    "videoId": "P2pgWsYSyUA",
+		    "start": 65
+		  },
+		  {
+		    "title": "Bloodsport - The Last Fight",
+		    "videoID": "CQ1zirwMCr4",
+		    "start": 476
+		  },
+		  {
 		    "title": "Fast And The Furious - Corona Time",
 		    "videoID": "O4hkEXBKGeA",
 		    "start": 78
@@ -151,6 +171,11 @@
 		    "title": "Westworld - Bar shootout",
 		    "videoId": "Iit33EYEpb0",
 		    "start": 180
+		  },
+		  {
+		    "title": "Wolf Of Wallstreet - Money Chant",
+		    "videoId": "wM6exo00T5I",
+		    "start": 295
 		  },
 		  {
 		    "title": "Monty Python and the Holy Grail - Knight Running",
@@ -263,6 +288,11 @@
 		    "start": 66
 		  },
 		  {
+		    "title": "The Big Lebowski - Donny's Ashes Scene",
+		    "videoId": "_4ezPvzKe5M",
+		    "start": 54
+		  },
+		  {
 		    "title": "Mean Girls - Jingle Bell Rock",
 		    "videoId": "h81UOjlFmMs",
 		    "start": 15
@@ -281,6 +311,11 @@
 		    "title": "Back to the Future - Parking",
 		    "videoId": "mGrFtyd_LMI",
 		    "start": 49
+		  },
+		  {
+		    "title": "Rushmore - Max Fischer's Extracurricular Activities",
+		    "videoId": "vRLLyTHfX9A",
+		    "start": 20
 		  },
 		  {
 		    "title": "Beerfest - ZJ",

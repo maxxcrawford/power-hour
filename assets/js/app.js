@@ -1,6 +1,6 @@
 	"use strict";
 
-	const PLAYLIST_VERSION = "0.1.4";
+	const PLAYLIST_VERSION = "0.1.5";
 	const YOUTUBE_API_KEY = "foo";
 
 	let videoFrame;
@@ -9,11 +9,16 @@
 	var roundTotalCount = 60;
 	var roundTime = 60;
 	var arrayTrimLength = roundTotalCount - 2;
+	var shuffleMode = false
 
 	function hashCheck(hash) {
 		// Debug Mode
 		if (hash == "#debug") {
-			roundTime = 10;
+			roundTime = 6;
+		}
+
+		if (hash == "#shuffle") {
+			shuffleMode = true;
 		}
 
 		// Remove "#" from hash
@@ -90,7 +95,9 @@
 		endingVideos = playlist.endingVideos;
 
 		// TODO: Add shuffle option, rename videoPlaylist to "tempVideoPlaylist"
-		// shuffle(srcPlaylist);
+		if (shuffleMode) {
+			shuffle(srcPlaylist);
+		}
 
 		// console.log(srcPlaylist);
 
