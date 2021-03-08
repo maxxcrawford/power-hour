@@ -11,7 +11,7 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://kit.fontawesome.com/1c89033795.js" crossorigin="anonymous"></script>
 	</head>
-	<body>
+	<body id="player">
 		<header>
 			<img class="logo" src="assets/img/phtv-logo.svg" alt="Power Hour TV">
 		</header>
@@ -57,12 +57,12 @@
 				<ul>
 					<!-- TODO: Add "Go to Round" Input -->
 					<li>
-						<a href="#" class="settings-button" data-setting="centuryClub">
-							<i class="fa fa-toggle-off"></i> Century Club (100 Rounds)
+						<a href="#" data-value="false" class="settings-button offline" data-setting="centuryClub">
+							<i class="fa fa-toggle-off"></i>  Century Club (100 Rounds)
 						</a>
 					</li>
 					<li>
-						<a href="#" class="settings-button" data-setting="pissBreakVideo">
+						<a href="#" data-value="false" class="settings-button" data-setting="pissBreakVideo">
 							<i class="fa fa-toggle-off"></i> Disable Urine Break Video
 						</a>
 					</li>

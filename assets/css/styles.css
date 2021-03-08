@@ -282,25 +282,40 @@ header {
   border: none;
 }
 
-.player-controls span.offline {
-  cursor: not-allowed;
-  transition: all .2s ease-out;
-}
-
-.player-controls span.offline:hover {
-  opacity: 0.5;
-} */
+*/
 
 .start header {
   /* outline: 1px solid red; */
 }
 
+.start-menu-wrapper {
+  color: white;
+  border-radius: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  padding: 2rem;
+  z-index: 2;
+}
+
 .start-menu {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
+  transform: translateY(-50%);
+  width: 100%;
+  padding: 2rem 0;
+  z-index: 5;
+}
+
+.start-video-cover {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--black);
+  opacity: 0.5;
+  z-index: 2;
 }
 
 .start-menu ul {
@@ -309,9 +324,18 @@ header {
 }
 
 .start-menu ul li {
-  display: block;
+  display: flex;
   padding: 0 0 1rem;
-  text-align: center;
+  align-items: center;
+}
+
+.start-menu ul li:hover i {
+  visibility: visible;
+}
+
+.start-menu ul li:hover a {
+  text-decoration: underline;
+  color: #EEEEEE;
 }
 
 .start #videoFrame {
@@ -319,9 +343,26 @@ header {
 }
 
 .start-menu a {
-  display: block;
   color: white;
   text-decoration: none;
+  font-size: 2rem;
+  display: block;
+  margin-left: 1rem;
+}
+
+.start-menu li i {
+  display: inline-block;
+  visibility: hidden;
+}
+
+.offline, .offline a {
+  cursor: not-allowed;
+  transition: all .2s ease-out;
+  color: white!important;
+}
+
+.offline:hover, .offline:hover a {
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 600px) {
