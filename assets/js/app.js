@@ -1,19 +1,35 @@
 	"use strict";
 
-	const PLAYLIST_VERSION = "0.1.3";
+	const PLAYLIST_VERSION = "0.1.4";
 	const YOUTUBE_API_KEY = "foo";
+
+	const DEFAULT_SETTINGS = {
+		"centuryClub": false,
+		"pissBreakVideo": false,
+		"shuffle": false,
+	}
 
 	let videoFrame;
 
 	var iterationCount = 0;
 	var roundTotalCount = 60;
 	var roundTime = 60;
-	var arrayTrimLength = roundTotalCount - 2;
+	var arrayTrimLength = roundTotalCount - 3;
+
+	if (DEFAULT_SETTINGS["centuryClub"]) {
+		// TODO: Add watch event to update count, and rebuild playlist with additional videos
+		roundTotalCount = 100;
+	}
 
 	function hashCheck(hash) {
 		// Debug Mode
 		if (hash == "#debug") {
-			roundTime = 10;
+			roundTime = 3;
+		}
+
+				//
+		if (hash == "#shuffle") {
+			DEFAULT_SETTINGS["shuffle"] = true;
 		}
 
 		// Remove "#" from hash
@@ -31,6 +47,7 @@
 
 	let srcPlaylist;
 	let videoPlaylist;
+	let startingVideos;
 	let endingVideos;
 	let pauseVideos;
 	let introVideos;
@@ -72,7 +89,7 @@
 
 		if (localStorageVersion !== PLAYLIST_VERSION) {
 			// Fetch JSON
-			const json = await fetch("https://maxxcrawford.github.io/power-hour/assets/js/playlist.json")
+			const json = await fetch("assets/js/playlist.json")
 		  .then(response => response.json())
 		  .then(data => {return data});
 
@@ -87,14 +104,20 @@
 		srcPlaylist = playlist.videoPlaylist;
 		introVideos = playlist.introVideos;
 		pauseVideos = playlist.pauseVideos;
+		startingVideos = playlist.startingVideos;
 		endingVideos = playlist.endingVideos;
 
 		// TODO: Add shuffle option, rename videoPlaylist to "tempVideoPlaylist"
-		shuffle(srcPlaylist);
+		if (DEFAULT_SETTINGS["shuffle"]) {
+			shuffle(srcPlaylist);
+		}
 
-		// Trim main playlist to 58 videos and create new array for overflow/skip videos.
+		// Trim main playlist to 57 videos and create new array for overflow/skip videos.
 		videoPlaylist = srcPlaylist.slice(0, arrayTrimLength);
 		skipVideos = srcPlaylist.slice(arrayTrimLength + 1);
+
+		let startingVideosRandomNum = Math.floor(Math.random() * startingVideos.length);
+		videoPlaylist.unshift(startingVideos[startingVideosRandomNum]);
 
 		// Add ending videos to random array
 		videoPlaylist.push(endingVideos[0], endingVideos[1]);
@@ -160,7 +183,6 @@
 				player.state.currentVideoStartTime,
 			)
 
-
 			roundCount.innerHTML = iterationCount + 1;
 
 			// refresh data
@@ -170,10 +192,14 @@
 			videoFrame.pauseVideo();
 			player.state.isPaused = true;
 			clearInterval(playerTimerInterval);
-			videoFrame.loadVideoById(
-				pauseVideos[0].videoId,
-				0
-			)
+			if (!DEFAULT_SETTINGS["pissBreakVideo"]) {
+				videoFrame.loadVideoById(
+					pauseVideos[0].videoId,
+					0
+				)
+			} else {
+				staticFx.play();
+			}
 			// pause video
 			// update button
 		},
@@ -218,6 +244,7 @@
 			await player.updateState(iterationCount);
 			staticFx.play();
 			staticFx.classList.remove("hidden");
+			console.log(videoPlaylist[iterationCount]);
 			videoFrame.cueVideoById(
 				player.state.currentVideoId,
 				player.state.currentVideoStartTime,
@@ -233,7 +260,14 @@
 			});
 		},
 		saveSetting: function(setting) {
-			console.log(setting);
+			// TODO: Save settings to local storage
+			DEFAULT_SETTINGS[setting] = !DEFAULT_SETTINGS[setting];
+
+			if (setting === "centuryClub") {
+				roundTotalCount = 100;
+				roundTotal.innerHTML = roundTotalCount;
+			}
+
 		},
 		start: function() {
 			videoFrame.playVideo();
@@ -293,6 +327,11 @@
 			toggleSettingsButton: function() {
 				event.target.children[0].classList.toggle("fa-toggle-off");
 				event.target.children[0].classList.toggle("fa-toggle-on");
+				if (event.target.dataset.value === "false") {
+					event.target.dataset.value = "true";
+				} else {
+					event.target.dataset.value = "false";
+				}
 				player.saveSetting(event.target.dataset.setting);
 			},
 			openSettingsPanel: function() {
@@ -332,22 +371,20 @@
 	async function onPlayerReady(event) {
 		const bodyID = document.body.id;
 
-		switch (bodyID) {
-			case "player":
-				console.log("player");
-				await player.setup();
-				player.init();
-				break;
-			case bodyID === "start":
-				console.log("start");
-				videoFrame.setVolume(0);
-				videoFrame.cueVideoById(
-					introVideos[0].videoId,
-					introVideos[0].start,
-				);
-				videoFrame.playVideo();
+		if (bodyID === "player") {
+			console.log("player");
+			await player.setup();
+			player.init();
+		} else if (bodyID === "start") {
+			console.log("start");
+			videoFrame.setVolume(0);
+			videoFrame.cueVideoById(
+				introVideos[0].videoId,
+				introVideos[0].start,
+			);
+			videoFrame.playVideo();
+			document.body.classList.add("is-loaded");
 		}
-
 	}
 
 	function onPlayerStateChange(event) {

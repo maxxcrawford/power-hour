@@ -15,14 +15,17 @@
 		<header>
 			<img class="logo" src="assets/img/phtv-logo.svg" alt="Power Hour TV">
 		</header>
+		<div class="start-video-cover"></div>
 		<div class="start-menu fredoka">
-			<ul class="">
-				<li><i class="fas fa-coin fa-lg"></i>  <a href="player.html">Start</a></li>
-				<li class="offline"><i class="fas fa-coin fa-lg"></i> <a href="#">Settings</a></li>
-				<li class="offline"><i class="fas fa-coin fa-lg"></i> <a href="#">Credits</a></li>
-			</ul>
+			<div class="start-menu-wrapper">
+				<ul class="">
+					<li><i class="fas fa-coin fa-lg"></i>  <a href="player.html">Start</a></li>
+					<li class="offline"><i class="fas fa-coin fa-lg"></i> <a href="#">Settings</a></li>
+					<li class="offline"><i class="fas fa-coin fa-lg"></i> <a href="#">Credits</a></li>
+				</ul>
+			</div>
 		</div>
-		<video id="staticFx" src="assets/media/static.mp4" preload autoplay loop class="static"></video>
+		<video id="staticFx" src="assets/media/static.mp4" muted preload autoplay loop class="static"></video>
 		<div id="videoFrame"></div>
 		<!-- <a class="intro-link" href="player.html"></a>
 		<video poster="assets/img/phtv-logo.svg" width="1280" height="768" id="intro" src="assets/media/intro.mp4" preload autoplay class="full"></video>

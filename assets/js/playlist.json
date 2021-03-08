@@ -1,7 +1,32 @@
 {
-	"version": "0.1.2",
+	"version": "0.1.7",
 	"playlist": {
 		"videoPlaylist": [
+			{
+				"title": "Hot Rod - I Like to Party",
+				"videoId": "wxb_X12HZWQ",
+				"start": 27
+			},
+			{
+				"title": "Jurassic Park - It's a UNIX System",
+				"videoId": "dxIPcbmo1_U",
+				"start": 3
+			},
+			{
+				"title": "Men In Black - A Series of Simple Tests",
+				"videoId": "NzWNBbY-zSE",
+				"start": 142
+			},
+			{
+				"title": "Batman Suit-up Compilation",
+				"videoId": "FQyxKzuRT9Q",
+				"start": 25
+			},
+			{
+				"title": "Scott Pilgrim vs. The World | Lucas Lee",
+				"videoId": "YyFGnad27yw",
+				"start": 40
+			},
 			{
 				"title": "Mean Girls - Jingle Bell Rock",
 				"videoId": "h81UOjlFmMs",
@@ -268,11 +293,6 @@
 				"start": 22
 			},
 			{
-				"title": "Arnold Schwarzenegger - Total Recall Commentary",
-				"videoId": "ncR2_pnzngM",
-				"start": 99
-			},
-			{
 				"title": "Blockers - Butt Chugging",
 				"videoId": "TfsGgp4go6k",
 				"start": 63
@@ -325,6 +345,18 @@
 			"title": "Austin Powers Evacuation Complete",
 			"videoId": "VUdukEEf3ek",
 			"start": 0
+			}
+		],
+		"startingVideos": [
+			{
+			"title": "Baby Driver",
+			"videoId": "7ARFyrM6gVs",
+			"start": 127
+		},
+			{
+			"title": "Days of Thunder",
+			"videoId": "Wj0_pNr1NDs",
+			"start": 100
 			}
 		],
 		"introVideos": [
