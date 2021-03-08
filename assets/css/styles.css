@@ -282,14 +282,7 @@ header {
   border: none;
 }
 
-.player-controls span.offline {
-  cursor: not-allowed;
-  transition: all .2s ease-out;
-}
-
-.player-controls span.offline:hover {
-  opacity: 0.5;
-} */
+*/
 
 .start header {
   /* outline: 1px solid red; */
@@ -309,9 +302,17 @@ header {
 }
 
 .start-menu ul li {
-  display: block;
+  display: flex;
   padding: 0 0 1rem;
-  text-align: center;
+  align-items: center;
+}
+
+.start-menu ul li:hover i {
+  visibility: visible;
+}
+
+.start-menu ul li:hover a {
+  color: var(--maroon);
 }
 
 .start #videoFrame {
@@ -319,9 +320,26 @@ header {
 }
 
 .start-menu a {
-  display: block;
   color: white;
   text-decoration: none;
+  font-size: 2rem;
+  display: block;
+  margin-left: 1rem;
+}
+
+.start-menu li i {
+  display: inline-block;
+  visibility: hidden;
+}
+
+.offline, .offline a {
+  cursor: not-allowed;
+  transition: all .2s ease-out;
+  color: white!important;
+}
+
+.offline:hover, .offline:hover a {
+  opacity: 0.5;
 }
 
 @media only screen and (max-width: 600px) {

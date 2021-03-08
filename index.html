@@ -11,17 +11,18 @@
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
 		<script src="https://kit.fontawesome.com/1c89033795.js" crossorigin="anonymous"></script>
 	</head>
-	<body class="start">
+	<body class="start" id="start">
 		<header>
 			<img class="logo" src="assets/img/phtv-logo.svg" alt="Power Hour TV">
 		</header>
-		<div class="start-menu">
+		<div class="start-menu fredoka">
 			<ul class="">
-				<li><a href="player.html">Start</a></li>
-				<li><a href="#">Settings</a></li>
-				<li><a href="#">Credits</a></li>
+				<li><i class="fas fa-coin fa-lg"></i>  <a href="player.html">Start</a></li>
+				<li class="offline"><i class="fas fa-coin fa-lg"></i> <a href="#">Settings</a></li>
+				<li class="offline"><i class="fas fa-coin fa-lg"></i> <a href="#">Credits</a></li>
 			</ul>
 		</div>
+		<video id="staticFx" src="assets/media/static.mp4" preload autoplay loop class="static"></video>
 		<div id="videoFrame"></div>
 		<!-- <a class="intro-link" href="player.html"></a>
 		<video poster="assets/img/phtv-logo.svg" width="1280" height="768" id="intro" src="assets/media/intro.mp4" preload autoplay class="full"></video>

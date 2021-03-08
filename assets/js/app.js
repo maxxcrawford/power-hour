@@ -330,9 +330,24 @@
 	};
 
 	async function onPlayerReady(event) {
-		await player.setup();
-		player.init();
-		// event.target.playVideo();
+		const bodyID = document.body.id;
+
+		switch (bodyID) {
+			case "player":
+				console.log("player");
+				await player.setup();
+				player.init();
+				break;
+			case bodyID === "start":
+				console.log("start");
+				videoFrame.setVolume(0);
+				videoFrame.cueVideoById(
+					introVideos[0].videoId,
+					introVideos[0].start,
+				);
+				videoFrame.playVideo();
+		}
+
 	}
 
 	function onPlayerStateChange(event) {
