@@ -270,6 +270,7 @@
 
 		},
 		start: function() {
+			console.log('start party')
 			videoFrame.playVideo();
 			playerTimer();
 			//
