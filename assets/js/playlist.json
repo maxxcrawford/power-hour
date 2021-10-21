@@ -3,6 +3,11 @@
 	"playlist": {
 		"videoPlaylist": [
 			{
+				"title": "Burn After Reading - Drinking Problem",
+				"videoId": "ABdDCqSg0fc",
+				"start": 26
+			},
+			{
 				"title": "Hot Rod - I Like to Party",
 				"videoId": "wxb_X12HZWQ",
 				"start": 27
@@ -338,6 +343,11 @@
 				"title": "Thelma & Louise",
 				"videoId": "66CP-pq7Cx0",
 				"start": 172
+			},
+			{
+				"title": "The Truman Show",
+				"videoId": "_zYn-HHcyA",
+				"start": 205
 			}
 		],
 		"pauseVideos": [

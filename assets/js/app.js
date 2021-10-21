@@ -5,7 +5,7 @@
 
 	const DEFAULT_SETTINGS = {
 		"centuryClub": false,
-		"pissBreakVideo": false,
+		"pissBreakVideo": true,
 		"shuffle": false,
 	}
 
@@ -24,7 +24,13 @@
 	function hashCheck(hash) {
 		// Debug Mode
 		if (hash == "#debug") {
-			roundTime = 3;
+			roundTime = 5;
+		}
+
+		// Debug end
+		if (hash == "#debug-end") {
+			roundTime = 5;
+			iterationCount = 59;
 		}
 
 				//
@@ -122,6 +128,8 @@
 		// Add ending videos to random array
 		videoPlaylist.push(endingVideos[0], endingVideos[1]);
 
+		console.log(videoPlaylist);
+		
 	}
 
 	buildPlayLists();
@@ -134,6 +142,7 @@
 	const roundTotal = document.getElementById("roundTotal");
 	const countdownSeconds = document.getElementById("countdownSeconds");
 	const staticFx = document.getElementById("staticFx");
+	const turnOffFx = document.getElementById("turnOffFx");
 	const muteButton = document.getElementById("muteButton");
 	const settingsOpenButton = document.getElementById("settingsOpenButton");
 	const settingsCloseButton = document.getElementById("settingsCloseButton");
@@ -167,9 +176,55 @@
 			currentVideoId: "",
 			currentVideoStartTime: 0,
 			elapsedTimeLeftInRound: 0,
+			notStarted: true,
 		},
 		init: function() {
 			console.log("init");
+		},
+		keypressListener: function(e) {
+			console.log(e.key);
+			switch (e.key) {
+				case " ":
+					// Spacebar
+					if (player.state.notStarted) {
+						player.state.notStarted = false;
+						player.start();
+					} else {
+						player.playPause();
+					}
+					break;
+				case "m":
+					// Mute
+					player.mute();
+					break;
+				case "n":
+					// New video
+					player.newVideo();
+					break;
+				case "s":
+					// Settings
+					if (settingsPanel.classList.contains("open")) {
+						player.ui.closeSettingsPanel();
+					} else {
+						player.ui.openSettingsPanel();
+					}
+					break;
+				default:
+					break;
+			}
+		},
+		stop: function() {
+			console.log("End of line");
+			progressBar.classList.add("no-animation");
+			videoFrame.pauseVideo();
+			clearInterval(playerTimerInterval);
+			// console.log("turnOffFx", turnOffFx);
+			staticFx.classList.add("hidden");
+			staticFx.pause();
+			turnOffFx.play();
+			turnOffFx.classList.remove("hidden");	
+			countdownSeconds.innerHTML = "00";
+			player.ui.togglePlayPause();
 		},
 		next: async function() {
 			iterationCount++;
@@ -177,7 +232,13 @@
 			staticFx.classList.remove("hidden");
 			player.ui.resetProgressBar();
 			await player.updateState(iterationCount);
-			console.log(videoPlaylist[iterationCount]);
+			// console.log(videoPlaylist[iterationCount]);
+
+			if (iterationCount > 59) {
+				player.stop();
+				return;
+        	}
+
 			videoFrame.loadVideoById(
 				player.state.currentVideoId,
 				player.state.currentVideoStartTime,
@@ -256,8 +317,9 @@
 			settingsOpenButton.addEventListener("click", player.ui.openSettingsPanel, false);
 			settingsCloseButton.addEventListener("click", player.ui.closeSettingsPanel, false);
 			settingsOptionButtons.forEach(button => {
-				button.addEventListener("click", player.ui.toggleSettingsButton, false);
+				button.addEventListener("click", player.ui.toggleSettingsButton, true);
 			});
+			window.addEventListener("keydown", this.keypressListener, false );
 		},
 		saveSetting: function(setting) {
 			// TODO: Save settings to local storage
@@ -336,7 +398,7 @@
 				player.saveSetting(event.target.dataset.setting);
 			},
 			openSettingsPanel: function() {
-				settingsPanel.classList.toggle("open");
+				settingsPanel.classList.add("open");
 			},
 			closeSettingsPanel: function() {
 				settingsPanel.classList.remove("open");
@@ -348,13 +410,18 @@
 		},
 		updateState: async function(count) {
 			// Sets player state video/start time based on which round the user is in.
-			const youtubeFetchURL = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoPlaylist[count].videoId}&key=${YOUTUBE_API_KEY}`;
+			// console.log("count: ", count);
+			if (count > 59) {
+				return;
+			}
+			
+			// const youtubeFetchURL = `https://www.googleapis.com/youtube/v3/videos?part=contentDetails&id=${videoPlaylist[count].videoId}&key=${YOUTUBE_API_KEY}`;
 
 			// const videoStatus = await fetch(youtubeFetchURL)
-      // .then((response) => response.json())
-      // .then(data => {
-      //   return data;
-      // });
+			// .then((response) => response.json())
+			// .then(data => {
+			//   return data;
+			// });
 			//
 			// const canBeEmbedded = videoStatus.items[0].contentDetails.contentRating.ytRating;
 			//
@@ -363,6 +430,10 @@
 			// 	console.error(`The video, "${videoPlaylist[count].title}" is age-restricted (https://youtu.be/${videoPlaylist[count].videoId})`);
 			// 	// throw new Error("This video is age-restricted");
 			// }
+
+			
+
+			
 
 			player.state.currentVideoId = videoPlaylist[count].videoId;
 			player.state.currentVideoStartTime = videoPlaylist[count].start;
@@ -425,6 +496,8 @@
 				staticFx.play();
 				staticFx.classList.remove("hidden");
 				clearInterval(playerTimerInterval);
+				console.log("Play next video");
+				// Play next video
 				player.next();
 				// Remove this
 				playerTimer();

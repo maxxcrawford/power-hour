@@ -62,11 +62,11 @@ header {
   opacity: 1;
 }
 
-.static {
+.static, .turn-off {
   z-index: 1
 }
 
-.static.hidden {
+.static.hidden, .full.hidden {
   visibility: hidden;
   opacity: 0;
 }
@@ -329,11 +329,15 @@ header {
   align-items: center;
 }
 
-.start-menu ul li:hover i {
+.start-menu ul li:focus {
+  outline: none;
+}
+
+.start-menu ul li:hover i, .start-menu ul li:focus i {
   visibility: visible;
 }
 
-.start-menu ul li:hover a {
+.start-menu ul li:hover a, .start-menu ul li:focus a {
   text-decoration: underline;
   color: #EEEEEE;
 }
