@@ -7,7 +7,7 @@
 		"centuryClub": false,
 		"pissBreakVideo": true,
 		"shuffle": false,
-		"shotClip": false,
+		"shotClip": true,
 	}
 
 	let videoFrame;
@@ -108,7 +108,8 @@
 		const playlist = JSON.parse(localStorage.getItem("playlist"));
 
 		// Define the playlists
-		srcPlaylist = playlist.videoPlaylist;
+		srcPlaylist = playlist.judithMitchPlaylist;
+		// srcPlaylist = playlist.videoPlaylist;
 		introVideos = playlist.introVideos;
 		pauseVideos = playlist.pauseVideos;
 		startingVideos = playlist.startingVideos;
@@ -123,8 +124,8 @@
 		videoPlaylist = srcPlaylist.slice(0, arrayTrimLength);
 		skipVideos = srcPlaylist.slice(arrayTrimLength + 1);
 
-		let startingVideosRandomNum = Math.floor(Math.random() * startingVideos.length);
-		videoPlaylist.unshift(startingVideos[startingVideosRandomNum]);
+		// let startingVideosRandomNum = Math.floor(Math.random() * startingVideos.length);
+		// videoPlaylist.unshift(startingVideos[startingVideosRandomNum]);
 
 		// Add ending videos to random array
 		videoPlaylist.push(endingVideos[0], endingVideos[1]);

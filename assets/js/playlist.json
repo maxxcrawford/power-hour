@@ -1,6 +1,113 @@
 {
 	"version": "0.1.7",
 	"playlist": {
+		"judithMitchPlaylist": [
+			{
+				"title": "Los Del Rio - Macarena (Bayside Boys Remix)",
+				"videoId": "zWaymcVmJ-A",
+				"start": 20
+			},
+			{
+				"title": "Robyn - Show Me Love",
+				"videoId": "bhWEI6-_w9E",
+				"start": 82
+			},
+			{
+				"title": "White Town - Your Woman",
+				"videoId": "lVL-zZnD3VU",
+				"start": 2
+			},
+			{
+				"title": "Stroke 9 - Little Black Backpack",
+				"videoId": "L0yYCqkt0VE",
+				"start": 15
+			},
+			{
+				"title": "Blessid Union of Souls - Hey Leonardo (She Likes Me for Me)",
+				"videoId": "wxVmyNy9T5E",
+				"start": 0
+			},
+			{
+				"title": "Savage Garden - I Want You",
+				"videoId": "HQt6jIKNwgU",
+				"start": 8
+			},
+			{
+				"title": "Eminem - My Name Is",
+				"videoId": "sNPnbI1arSE",
+				"start": 25
+			},
+			{
+				"title": "Paula Cole - I Don't Want to Wait",
+				"videoId": "L_dVEtLPdDE",
+				"start": 20
+			},
+			{
+				"title": "Deep Blue Something - Breakfast At Tiffany's",
+				"videoId": "1ClCpfeIELw",
+				"start": 153
+			},
+			{
+				"title": "Madonna - Frozen",
+				"videoId": "XS088Opj9o0",
+				"start": 29
+			},
+			{
+				"title": "Barenaked Ladies - One Week",
+				"videoId": "fC_q9KPczAg",
+				"start": 20
+			},
+			{
+				"title": "Alanis Morissette - You Oughta Know",
+				"videoId": "NPcyTyilmYY",
+				"start": 19
+			},
+			{
+				"title": "Donna Lewis - I Love You Always Forever",
+				"videoId": "SqdWTeXWvOg",
+				"start": 138
+			},
+			{
+				"title": "Tim McGraw - Something Like That",
+				"videoId": "HYRFgWbalBE",
+				"start": 5
+			},
+			{
+				"title": "The Corrs - Breathless",
+				"videoId": "vzerbXFwGCE",
+				"start": 34
+			},
+			{
+				"title": "Hootie & The Blowfish - Only Wanna Be with You",
+				"videoId": "Ln6WQqRDrCo",
+				"start": 45
+			},
+			{
+				"title": "EMF - Unbelievable",
+				"videoId": "sfCLt0kTd5E",
+				"start": 25
+			},
+			{
+				"title": "Coolio - Gangsta's Paradise",
+				"videoId": "fPO76Jlnz6c",
+				"start": 25
+			},
+			{
+				"title": "Bush - Glycerine",
+				"videoId": "hOllF3TgAsM",
+				"start": 76
+			},
+			{
+				"title": "Pearl Jam - Even Flow",
+				"videoId": "CxKWTzr-k6s",
+				"start": 45
+			},
+			{
+				"title": "VIDEO_TITLE",
+				"videoId": "X0DeIqJm4vM",
+				"start": 20
+			}
+		],
 		"videoPlaylist": [
 			{
 				"title": "Burn After Reading - Drinking Problem",
