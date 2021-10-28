@@ -62,7 +62,11 @@ header {
   opacity: 1;
 }
 
-.static, .turn-off {
+.static {
+  z-index: 2
+}
+
+.turn-off, .non-player-video {
   z-index: 1
 }
 

@@ -7,6 +7,7 @@
 		"centuryClub": false,
 		"pissBreakVideo": true,
 		"shuffle": false,
+		"shotClip": false,
 	}
 
 	let videoFrame;
@@ -24,7 +25,7 @@
 	function hashCheck(hash) {
 		// Debug Mode
 		if (hash == "#debug") {
-			roundTime = 5;
+			roundTime = 10;
 		}
 
 		// Debug end
@@ -142,6 +143,7 @@
 	const roundTotal = document.getElementById("roundTotal");
 	const countdownSeconds = document.getElementById("countdownSeconds");
 	const staticFx = document.getElementById("staticFx");
+	const shotClip = document.getElementById("shotClip");
 	const turnOffFx = document.getElementById("turnOffFx");
 	const muteButton = document.getElementById("muteButton");
 	const settingsOpenButton = document.getElementById("settingsOpenButton");
@@ -182,7 +184,7 @@
 			console.log("init");
 		},
 		keypressListener: function(e) {
-			console.log(e.key);
+			console.log(e.key, player.state);
 			switch (e.key) {
 				case " ":
 					// Spacebar
@@ -337,6 +339,7 @@
 			playerTimer();
 			//
 			document.body.classList.add("is-loaded");
+			player.state.notStarted = false;
 		},
 		mute: function() {
 			const muteButtonClassList = muteButton.children[0].classList;
@@ -473,6 +476,35 @@
 		}
 	}
 
+	function playerTimerEndOfVideo() {
+		staticFx.play();
+    	staticFx.classList.remove("hidden");
+		// Hide Shot Video
+		shotClip.classList.add("hidden");	
+		
+		console.log("Play next video");
+		// Play next video
+		player.next();
+		// Remove this
+		playerTimer();
+		
+		shotClip.removeEventListener("ended", playerTimerEndOfVideo, false);
+	}
+
+	function shotClipPlayer() {
+		videoFrame.pauseVideo();
+
+		setTimeout(() => {
+			staticFx.classList.add("hidden");
+			staticFx.pause();
+			
+			shotClip.play();
+			shotClip.classList.remove("hidden");	
+
+			shotClip.addEventListener("ended", playerTimerEndOfVideo, false);
+		}, 999);		
+	}
+
 	function playerTimer(timeRemaining) {
 		let roundCountdownTime = roundTime;
 
@@ -496,11 +528,17 @@
 				staticFx.play();
 				staticFx.classList.remove("hidden");
 				clearInterval(playerTimerInterval);
-				console.log("Play next video");
-				// Play next video
-				player.next();
-				// Remove this
-				playerTimer();
+
+				if (DEFAULT_SETTINGS["shotClip"]) {
+					shotClipPlayer();
+				} else {
+					console.log("Play next video");
+					// Play next video
+					player.next();
+					// Remove this
+					playerTimer();
+				}
+				
 			} else if (timer < 10) {
 				countdownSeconds.innerHTML = "0" + timer;
 			} else if (roundTime - 2) {

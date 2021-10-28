@@ -18,8 +18,9 @@
 		<!-- <div class="first-play">
 			<span id="playPause"><i class="fa fa-play-circle"></i></span>
 		</div> -->
-		<video id="staticFx" src="assets/media/static.mp4" preload autoplay loop class="static"></video>
-		<video id="turnOffFx" src="assets/media/turn-off.mp4" preload muted autoplay class="full hidden turn-off"></video>
+		<video id="staticFx" src="assets/media/static.mp4" muted loop class="static"></video>
+		<video id="turnOffFx" src="assets/media/turn-off.mp4" preload="auto" muted class="full hidden turn-off"></video>
+		<video id="shotClip" src="assets/media/clinton.mp4" preload="auto" class="full hidden non-player-video"></video>
 		<span id="startButton"><i class="fa fa-play-circle"></i></span>
 		<div id="videoFrame"></div>
 		<div class="player-ui">
@@ -65,6 +66,11 @@
 					<li>
 						<a href="#" data-value="false" class="settings-button" data-setting="pissBreakVideo">
 							<i class="fa fa-toggle-off"></i> Disable Urine Break Video
+						</a>
+					</li>
+					<li>
+						<a href="#" data-value="true" class="settings-button" data-setting="shotClip">
+							<i class="fa fa-toggle-on"></i> Clinton Shot Video
 						</a>
 					</li>
 				</ul>
