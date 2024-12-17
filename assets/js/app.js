@@ -108,8 +108,8 @@
 		const playlist = JSON.parse(localStorage.getItem("playlist"));
 
 		// Define the playlists
-		srcPlaylist = playlist.judithMitchPlaylist;
-		// srcPlaylist = playlist.videoPlaylist;
+		// srcPlaylist = playlist.judithMitchPlaylist;
+		srcPlaylist = playlist.videoPlaylist;
 		introVideos = playlist.introVideos;
 		pauseVideos = playlist.pauseVideos;
 		startingVideos = playlist.startingVideos;
