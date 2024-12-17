@@ -1,6 +1,223 @@
 {
 	"version": "0.1.7",
 	"playlist": {
+		"judithMitchPlaylist": [
+			{
+				"title": "Los Del Rio - Macarena (Bayside Boys Remix)",
+				"videoId": "zWaymcVmJ-A",
+				"start": 20
+			},
+			{
+				"title": "Robyn - Show Me Love",
+				"videoId": "bhWEI6-_w9E",
+				"start": 82
+			},
+			{
+				"title": "White Town - Your Woman",
+				"videoId": "lVL-zZnD3VU",
+				"start": 2
+			},
+			{
+				"title": "Stroke 9 - Little Black Backpack",
+				"videoId": "L0yYCqkt0VE",
+				"start": 15
+			},
+			{
+				"title": "Blessid Union of Souls - Hey Leonardo (She Likes Me for Me)",
+				"videoId": "wxVmyNy9T5E",
+				"start": 0
+			},
+			{
+				"title": "Savage Garden - I Want You",
+				"videoId": "HQt6jIKNwgU",
+				"start": 8
+			},
+			{
+				"title": "Eminem - My Name Is",
+				"videoId": "sNPnbI1arSE",
+				"start": 25
+			},
+			{
+				"title": "Paula Cole - I Don't Want to Wait",
+				"videoId": "L_dVEtLPdDE",
+				"start": 20
+			},
+			{
+				"title": "Deep Blue Something - Breakfast At Tiffany's",
+				"videoId": "1ClCpfeIELw",
+				"start": 153
+			},
+			{
+				"title": "Madonna - Frozen",
+				"videoId": "XS088Opj9o0",
+				"start": 29
+			},
+			{
+				"title": "Barenaked Ladies - One Week",
+				"videoId": "fC_q9KPczAg",
+				"start": 20
+			},
+			{
+				"title": "Alanis Morissette - You Oughta Know",
+				"videoId": "NPcyTyilmYY",
+				"start": 19
+			},
+			{
+				"title": "Donna Lewis - I Love You Always Forever",
+				"videoId": "SqdWTeXWvOg",
+				"start": 138
+			},
+			{
+				"title": "Tim McGraw - Something Like That",
+				"videoId": "HYRFgWbalBE",
+				"start": 5
+			},
+			{
+				"title": "The Corrs - Breathless",
+				"videoId": "vzerbXFwGCE",
+				"start": 34
+			},
+			{
+				"title": "Hootie & The Blowfish - Only Wanna Be with You",
+				"videoId": "Ln6WQqRDrCo",
+				"start": 45
+			},
+			{
+				"title": "EMF - Unbelievable",
+				"videoId": "sfCLt0kTd5E",
+				"start": 25
+			},
+			{
+				"title": "Coolio - Gangsta's Paradise",
+				"videoId": "fPO76Jlnz6c",
+				"start": 25
+			},
+			{
+				"title": "Bush - Glycerine",
+				"videoId": "hOllF3TgAsM",
+				"start": 76
+			},
+			{
+				"title": "Pearl Jam - Even Flow",
+				"videoId": "CxKWTzr-k6s",
+				"start": 45
+			},
+			{
+				"title": "Sheryl Crow - Strong Enough",
+				"videoId": "7CCWMMEN1Vc",
+				"start": 50
+			},
+			{
+				"title": "Aaliyah - Are You That Somebody",
+				"videoId": "lNMk67U6Dr0",
+				"start": 28
+			},
+			{
+				"title": "Cher - Believe",
+				"videoId": "nZXRV4MezEw",
+				"start": 88
+			},
+			{
+				"title": "Shawn Mullins - Lullaby",
+				"videoId": "hG9C0VwruXE",
+				"start": 40
+			},
+			{
+				"title": "Goo Goo Dolls - Slide",
+				"videoId": "yP4qdefD2To",
+				"start": 56
+			},
+			{
+				"title": "Matchbox Twenty - Push",
+				"videoId": "HAkHqYlqops",
+				"start": 29
+			},
+			{
+				"title": "Shania Twain - That Don't Impress Me Much",
+				"videoId": "mqFLXayD6e8",
+				"start": 23
+			},
+			{
+				"title": "Collective Soul - Shine",
+				"videoId": "_m0bI82Rz_k",
+				"start": 39
+			},
+			{
+				"title": "The Smashing Pumpkins - Today",
+				"videoId": "xmUZ6nCFNoU",
+				"start": 30
+			},
+			{
+				"title": "4 Non Blondes - What's Up",
+				"videoId": "6NXnxTNIWkc",
+				"start": 60
+			},
+			{
+				"title": "Violent Femmes - Blister in the sun",
+				"videoId": "hYZkoI1ggEw",
+				"start": 29
+			},
+			{
+				"title": "The Cardigans - Lovefool",
+				"videoId": "NI6aOFI7hms",
+				"start": 22
+			},
+			{
+				"title": "Alanis Morissette - Hand In My Pocket",
+				"videoId": "CUjIY_XxF1g",
+				"start": 53
+			},
+			{
+				"title": "Third Eye Blind - Never Let You Go",
+				"videoId": "gl-JGJp-_CM",
+				"start": 37
+			},
+			{
+				"title": "Lenny Kravitz - Fly Away",
+				"videoId": "EvuL5jyCHOw",
+				"start": 13
+			},
+			{
+				"title": "Merril Bainbridge - Mouth",
+				"videoId": "5AlklK5q0wQ",
+				"start": 0
+			},
+			{
+				"title": "No Doubt - Don't Speak",
+				"videoId": "TR3Vdo5etCQ",
+				"start": 30
+			},
+			{
+				"title": "Blackstreet - No Diggity",
+				"videoId": "3KL9mRus19o",
+				"start": 43
+			},
+			{
+				"title": "Goo Goo Dolls - Iris",
+				"videoId": "NdYWuo9OFAw",
+				"start": 10
+			},
+			{
+				"title": "Red Hot Chili Peppers - Scar Tissue",
+				"videoId": "mzJj5-lubeM",
+				"start": 0
+			},
+			{
+				"title": "Santana - Smooth ft. Rob Thomas",
+				"videoId": "6Whgn_iE5uc",
+				"start": 23
+			},
+			{
+				"title": "Sister Hazel - All For You",
+				"videoId": "f46ulX6uwGc",
+				"start": 78
+			},
+			{
+				"title": "VIDEO_TITLE",
+				"videoId": "X0DeIqJm4vM",
+				"start": 20
+			}
+		],
 		"videoPlaylist": [
 			{
 				"title": "Burn After Reading - Drinking Problem",
@@ -19,8 +236,8 @@
 			},
 			{
 				"title": "Men In Black - A Series of Simple Tests",
-				"videoId": "NzWNBbY-zSE",
-				"start": 142
+				"videoId": "qHR8IdyTO1M",
+				"start": 152
 			},
 			{
 				"title": "Batman Suit-up Compilation",
@@ -49,17 +266,17 @@
 			},
 			{
 				"title": "Monty Python and the Holy Grail - Dennis",
-				"videoId": "tNOioHk7zWs",
+				"videoId": "R7qT-C-0ajI",
 				"start": 119
 			},
 			{
-				"title": "Beefest - Das Boot",
+				"title": "Beerfest - Das Boot",
 				"videoId": "wEqVkJiYJ80",
 				"start": 61
 			},
 			{
 				"title": "Top Gun - Volleyball",
-				"videoId": "via8G0cqQME",
+				"videoId": "okyLAKclleo",
 				"start": 2
 			},
 			{
@@ -89,13 +306,8 @@
 			},
 			{
 				"title": "The Shining - Bar Scene",
-				"videoId": "tmY4k85_XEE",
+				"videoId": "YnzYWsdHEpM",
 				"start": 0
-			},
-			{
-				"title": "Crispin Glover on Letterman",
-				"videoId": "7dYjdKbMT_c",
-				"start": 91
 			},
 			{
 				"title": "The Big Lebowski - Over the Line",
@@ -129,8 +341,8 @@
 			},
 			{
 				"title": "Back to the Future - Parking",
-				"videoId": "mGrFtyd_LMI",
-				"start": 49
+				"videoId": "p1BFv33lQAM",
+				"start": 11
 			},
 			{
 				"title": "Hot Rod - Cool Beans",
@@ -189,12 +401,12 @@
 			},
 			{
 				"title": "Superbad - Fake ID",
-				"videoId": "BBYyflqgV8A",
+				"videoId": "2HTHPtoNJLk",
 				"start": 58
 			},
 			{
 				"title": "Fast And The Furious - Corona Time",
-				"videoID": "O4hkEXBKGeA",
+				"videoID": "inCSNo3p-JM",
 				"start": 78
 			},
 			{
@@ -258,11 +470,6 @@
 				"start": 7
 			},
 			{
-				"title": "The Living Daylights - Ghetto Blaster",
-				"videoId": "BHyPS1boeuI",
-				"start": 8
-			},
-			{
 				"title": "Point Break - Fuck You Up",
 				"videoId": "aMukX7yVSTM",
 				"start": 43
@@ -289,13 +496,13 @@
 			},
 			{
 				"title": "Django Unchained - Beer Foam",
-				"videoId": "tSjie7nTzJA",
-				"start": 43
+				"videoId": "5e7A-kEQxDU",
+				"start": 51
 			},
 			{
 				"title": "Cat Woman - One-on-One",
-				"videoId": "o02MxS2ugEU",
-				"start": 22
+				"videoId": "rNlmRId2FVQ",
+				"start": 17
 			},
 			{
 				"title": "Blockers - Butt Chugging",
